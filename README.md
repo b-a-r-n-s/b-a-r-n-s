@@ -1,53 +1,39 @@
-# Hi, I'm Barnabas 👋
+# Hi, I'm Barnabas
 
-I'm a 400-level student at the Federal University of Technology, Akure, building toward a career in **AI Engineering**.
+I'm a 400-level Electrical and Electronics Engineering student at the Federal University of Technology, Akure (FUTA), currently on SIWES placement at NNPC Gas Infrastructure Company, Asset Operations North.
 
-I enjoy turning knowledge into practical solutions, breaking down complex problems through critical analysis, and learning by building.
+I'm building toward becoming an **AI Engineer**, learning through a mix of structured study, hands-on practice, and practical projects.
 
-## What I'm focused on
+## What I'm learning
 
-- 🤖 Artificial Intelligence and Machine Learning
-- 🐍 Python and practical programming
-- 📊 Data analysis and applied machine learning
-- 🧠 Model evaluation, preprocessing, pipelines, and deployment fundamentals
-- 🌐 Building useful digital products and exploring technology
+- Python
+- NumPy and Pandas
+- scikit-learn and machine learning fundamentals
+- Data analysis and model evaluation
+- Building and improving practical software projects
 
-## Current Learning Journey
+I'm currently in the scikit-learn phase of my learning path, working through machine learning concepts and implementing what I learn. This profile is a record of that progression, not a claim that I have finished it.
 
-I'm documenting my transition from learning AI and ML concepts to applying them through practical projects. My work includes experiments with algorithms such as K-Means, Naive Bayes, Random Forests, model evaluation, hyperparameter tuning, and model persistence.
+## What I'm building
 
-My goal is not just to learn how models work, but to understand **why they work, when to use them, and how to turn them into useful solutions**.
+### [IG Easy Auto](https://www.igeasyauto.com)
+A production website I built for a real client, IG Easy Auto Limited, using Next.js, TypeScript, Tailwind CSS and Supabase.
 
-## Projects
+### [AI Engineer Roadmap](https://airoadmaplearn.vercel.app/)
+A learning roadmap and progress tracker I built to structure and track my own journey toward AI engineering.
 
 ### [AI/ML Learning](https://github.com/b-a-r-n-s/ai-ml-learning)
-A structured collection of my AI and machine learning learning journey, practice code, experiments, and implementations.
-
-### [AI Roadmap](https://airoadmaplearn.vercel.app/)
-A practical roadmap project focused on organizing the learning path toward AI engineering.
-
-### [Roadmap Web](https://github.com/b-a-r-n-s/Roadmap_web)
-A web project built around presenting a structured learning roadmap.
+My active machine learning learning repository, where I document practice, experiments and implementations as I progress.
 
 ### [Arduino Smart Home](https://github.com/b-a-r-n-s/arduino-smart-home)
-An exploration of Arduino-based smart-home concepts and hardware programming.
+An Arduino/ESP32 smart-home project from an engineering team project, combining sensors, automation, MQTT and Alexa integration.
 
-## How I Work
+## My approach
 
-I value:
+I care about understanding what I build rather than simply copying code. I learn, build, find what needs improvement, and keep moving forward.
 
-- **Critical thinking** over memorization
-- **Practical application** over passive learning
-- **Clear organization** and attention to detail
-- **Continuous learning** and knowledge sharing
-- **Building in public** and documenting progress
+My background in electrical and electronics engineering is part of the path: practical engineering first, then software, data and machine learning, with the long-term goal of becoming an AI Engineer.
 
-## Beyond Code
+This profile is still growing as I learn and build more.
 
-I'm also interested in technology opportunities, research, digital transformation, education, and finding ways technology can solve real problems in my environment.
-
-> Learning is the process. Building is the proof.
-
-## Connect
-
-- GitHub: [@b-a-r-n-s](https://github.com/b-a-r-n-s)
+**Learn → Build → Improve → Repeat.**
