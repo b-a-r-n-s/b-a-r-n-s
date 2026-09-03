@@ -11,7 +11,7 @@ import { projects } from "@/lib/projects";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  const page = useRef<main>(null);
+  const page = useRef<HTMLElement>(null);
   useEffect(() => {
     const ctx = gsap.context(() => {
       const intro = gsap.timeline({ defaults: { ease: "power4.out" } });
