@@ -27,7 +27,7 @@ export default function WorkPage() {
                 </div>
                 <h2 className="mt-5 text-[10vw] font-medium leading-[.86] tracking-[-.06em] md:text-[5.5vw]">{project.title}</h2>
               </div>
-              <ProjectVisual type={project.slug} />
+              <div className="relative overflow-hidden transition-transform duration-700 ease-out group-hover:scale-[1.012]"><ProjectVisual type={project.slug} /><div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-[rgba(139,92,246,.08)] via-transparent to-[rgba(56,189,248,.08)] opacity-0 transition-opacity duration-700 group-hover:opacity-100"/></div>
             </div>
             <div className="mt-6 flex justify-between gap-8 text-sm text-[var(--muted)]">
               <p className="max-w-xl">{project.description}</p>
