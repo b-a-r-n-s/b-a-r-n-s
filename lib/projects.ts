@@ -16,7 +16,7 @@ export const projects: Project[] = [
     title: "IG Easy Auto",
     category: "PRODUCT / WEB",
     description: "A production vehicle dealership platform built for customer-facing sales and procurement workflows, with dealership data management on the backend.",
-    href: "https://www.igeasyauto.com",
+    href: "https://igsautoltd.vercel.app",
     stack: ["Next.js", "TypeScript", "Tailwind", "Supabase"],
   },
   {
