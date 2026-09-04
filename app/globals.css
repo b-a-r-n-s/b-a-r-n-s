@@ -8,3 +8,5 @@
 
 .hero{isolation:isolate}.hero-title{min-width:0}.portrait img{display:block}.portrait{background:var(--surface)}
 @media(max-width:700px){.hero{min-height:100svh}.hero-title{width:100%;}.hero-title h1{font-size:clamp(3.6rem,16vw,6.5rem);line-height:.88;max-width:100%;}.hero-copy{max-width:18rem}.hero-image-wrap{margin-top:3rem;justify-content:center}.portrait{width:min(78vw,360px);height:48svh;max-height:520px}.hero-meta{bottom:1.25rem}.hero-meta span:last-child{display:none}}
+
+@keyframes menuIn{from{transform:translateY(-100%)}to{transform:translateY(0)}}
