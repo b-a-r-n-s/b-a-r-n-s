@@ -30,44 +30,39 @@ export default function Menu() {
         MENU <span className="text-[var(--purple)]">+</span>
       </button>
 
-      <div
-        aria-hidden={!open}
-        className={[
-          "fixed inset-0 z-[100] bg-[var(--bg)] px-6 py-6 md:px-10 md:py-7",
-          "transition-transform duration-700 ease-[cubic-bezier(.76,0,.24,1)]",
-          open ? "translate-y-0" : "-translate-y-full pointer-events-none",
-        ].join(" ")}
-      >
-        <div className="flex items-center justify-between border-b border-[var(--line)] pb-5">
-          <Link href="/" onClick={() => setOpen(false)} className="text-[11px] tracking-[.18em]">
-            BARNABAS ADEJO
-          </Link>
-          <button
-            type="button"
-            aria-label="Close menu"
-            onClick={() => setOpen(false)}
-            className="mono text-[11px] tracking-[.18em]"
-          >
-            CLOSE <span className="text-[var(--purple)]">×</span>
-          </button>
-        </div>
-
-        <nav className="flex min-h-[calc(100vh-100px)] flex-col justify-center">
-          {links.map(([number, label, href]) => (
-            <Link
-              key={number}
-              href={href}
-              onClick={() => setOpen(false)}
-              className="group flex items-baseline gap-5 border-b border-[var(--line)] py-5 md:py-7"
-            >
-              <span className="mono text-[10px] text-[var(--blue)]">{number}</span>
-              <span className="text-[12vw] font-semibold leading-[.86] tracking-[-.065em] transition-transform duration-500 group-hover:translate-x-3 group-hover:text-[var(--purple)] md:text-[7vw]">
-                {label}
-              </span>
+      {open && (
+        <div className="fixed inset-0 z-[100] bg-[var(--bg)] px-6 py-6 md:px-10 md:py-7 animate-[menuIn_.45s_cubic-bezier(.76,0,.24,1)]">
+          <div className="flex items-center justify-between border-b border-[var(--line)] pb-5">
+            <Link href="/" onClick={() => setOpen(false)} className="text-[11px] tracking-[.18em]">
+              BARNABAS ADEJO
             </Link>
-          ))}
-        </nav>
-      </div>
+            <button
+              type="button"
+              aria-label="Close menu"
+              onClick={() => setOpen(false)}
+              className="mono text-[11px] tracking-[.18em]"
+            >
+              CLOSE <span className="text-[var(--purple)]">×</span>
+            </button>
+          </div>
+
+          <nav className="flex min-h-[calc(100vh-100px)] flex-col justify-center">
+            {links.map(([number, label, href]) => (
+              <Link
+                key={number}
+                href={href}
+                onClick={() => setOpen(false)}
+                className="group flex items-baseline gap-5 border-b border-[var(--line)] py-5 md:py-7"
+              >
+                <span className="mono text-[10px] text-[var(--blue)]">{number}</span>
+                <span className="text-[12vw] font-semibold leading-[.86] tracking-[-.065em] transition-transform duration-500 group-hover:translate-x-3 group-hover:text-[var(--purple)] md:text-[7vw]">
+                  {label}
+                </span>
+              </Link>
+            ))}
+          </nav>
+        </div>
+      )}
     </>
   );
 }
