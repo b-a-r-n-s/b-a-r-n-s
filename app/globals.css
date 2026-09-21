@@ -23,4 +23,4 @@
 .hero-title h1{font-size:clamp(3.1rem,14vw,4.6rem);line-height:.86;max-width:100%;letter-spacing:-.06em;white-space:normal;overflow:visible;word-break:normal}
 .eyebrow{margin-bottom:1rem!important;font-size:8px!important;line-height:1.35}.hero-copy{margin-top:1.35rem!important;max-width:17rem;font-size:11px!important;line-height:1.65!important}.hero-actions{margin-top:1.4rem!important;gap:1.25rem}.hero-button{padding:.72rem 1rem;font-size:10px}.hero-link{font-size:10px}.hero-meta{bottom:1.25rem}
 .project-visual{min-height:300px}.visual-grid{background-size:38px 38px}}
-@keyframes menuIn{from{transform:translateY(-100%)}to{transform:translateY(0)}
+@keyframes menuIn{from{transform:translateY(-100%)}to{transform:translateY(0)}}
