@@ -25,7 +25,6 @@
     background: var(--bg);
   }
 
-  /* Image starts BELOW the text area */
   .hero-image-bg {
     position: absolute !important;
     top: 48svh !important;
@@ -33,6 +32,7 @@
     bottom: 0 !important;
     left: 0 !important;
     height: auto !important;
+    z-index: 0;
     background: var(--bg);
     overflow: hidden;
   }
@@ -41,7 +41,6 @@
     display: none;
   }
 
-  /* Face is at top of image — anchor image to top of container */
   .hero-image-bg img {
     position: absolute !important;
     inset: 0 !important;
@@ -53,17 +52,19 @@
     transform: none !important;
   }
 
-  /* Gradient blends dark bg above into the portrait below */
   .hero-image-gradient {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
     background:
       linear-gradient(
         180deg,
         var(--bg) 0%,
-        rgba(7,8,18,.88) 8%,
-        rgba(7,8,18,.38) 20%,
-        rgba(7,8,18,.05) 35%,
-        rgba(7,8,18,0) 65%,
-        rgba(7,8,18,.25) 100%
+        rgba(7,8,18,.88) 10%,
+        rgba(7,8,18,.42) 24%,
+        rgba(7,8,18,.08) 40%,
+        rgba(7,8,18,0) 68%,
+        rgba(7,8,18,.3) 100%
       );
   }
 
@@ -86,23 +87,21 @@
     padding-right: 0;
     transform: none !important;
     opacity: 1 !important;
-    overflow: visible;
+    overflow: visible !important;
   }
 
-  /* Fix name clipping — Tailwind's text-[15vw] is too wide */
   .hero-title h1 {
-    font-size: clamp(2.6rem, 12vw, 4rem) !important;
-    line-height: .86;
-    max-width: 100%;
+    font-size: clamp(2.6rem, 11.5vw, 4rem) !important;
+    line-height: .86 !important;
+    max-width: 100% !important;
     letter-spacing: -.06em;
-    white-space: normal;
-    overflow: visible;
+    white-space: nowrap;
+    overflow: visible !important;
     word-break: normal;
   }
 
-  /* reveal-line overflow:hidden clips text — fix it after GSAP completes */
   .reveal-line {
-    overflow: visible;
+    overflow: visible !important;
   }
 
   .eyebrow {
