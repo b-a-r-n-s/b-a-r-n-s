@@ -11,17 +11,137 @@
 .hero-actions{display:flex}.hero-button{display:inline-flex;align-items:center;gap:.7rem;border:1px solid rgba(139,92,246,.65);background:linear-gradient(110deg,#6d4aff,#426cff);border-radius:999px;padding:.85rem 1.25rem;font-size:.8rem;font-weight:600;box-shadow:0 10px 35px rgba(70,70,255,.18);transition:transform .3s ease,box-shadow .3s ease}.hero-button:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(70,70,255,.28)}.hero-link{font-size:.8rem;border-bottom:1px solid var(--purple);padding-bottom:.35rem}.hero-link:hover{color:#b6a3ff}
 @media(min-width:1101px){.hero-title{width:48%;max-width:700px}.hero-image-bg img{right:-12%;height:100%;width:auto;transform:none}.hero-image-gradient{background:linear-gradient(90deg,var(--bg) 0%,rgba(7,8,18,.99) 18%,rgba(7,8,18,.9) 33%,rgba(7,8,18,.55) 51%,rgba(7,8,18,.17) 72%,rgba(7,8,18,0) 100%),linear-gradient(180deg,rgba(7,8,18,.1),transparent 30%,rgba(7,8,18,.46) 100%)}}
 @media(min-width:701px) and (max-width:1100px){.hero-title{width:52%;max-width:620px}.hero-image-bg img{right:-10%;height:100%;width:auto;transform:none}.hero-image-gradient{background:linear-gradient(90deg,var(--bg) 0%,rgba(7,8,18,.99) 21%,rgba(7,8,18,.78) 42%,rgba(7,8,18,.3) 68%,rgba(7,8,18,0) 100%),linear-gradient(180deg,rgba(7,8,18,.12),transparent 30%,rgba(7,8,18,.5) 100%)}}
-@media(max-width:700px){
-.site-grid{background-size:44px 44px}
-.hero{min-height:100svh;position:relative;overflow:hidden;display:flex;flex-direction:column;background:var(--bg)}
-.hero-image-bg{position:absolute!important;top:48svh!important;right:0!important;bottom:0!important;left:0!important;height:auto!important;background:var(--bg);overflow:hidden}
-.hero-image-bg:after{display:none}
-.hero-image-bg img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:60% 0%!important;transform:none!important}
-.hero-image-gradient{background:linear-gradient(180deg,var(--bg) 0%,rgba(7,8,18,.88) 8%,rgba(7,8,18,.38) 20%,rgba(7,8,18,.05) 35%,rgba(7,8,18,0) 65%,rgba(7,8,18,.25) 100%)}
-.hero>div:nth-of-type(2){position:relative;z-index:2;display:block;min-height:100svh;height:100svh;padding:0}
-.hero-title{position:relative;z-index:12;width:calc(100% - 40px);max-width:420px;padding-top:20svh;padding-left:0;padding-right:0;transform:none!important;opacity:1!important;overflow:visible}
-.hero-title h1{font-size:clamp(2.6rem,12vw,4rem)!important;line-height:.86;max-width:100%;letter-spacing:-.06em;white-space:normal;overflow:visible;word-break:normal}
-.reveal-line{overflow:visible}
-.eyebrow{margin-bottom:1rem!important;font-size:8px!important;line-height:1.35}.hero-copy{margin-top:1.35rem!important;max-width:17rem;font-size:11px!important;line-height:1.65!important}.hero-actions{margin-top:1.4rem!important;gap:1.25rem}.hero-button{padding:.72rem 1rem;font-size:10px}.hero-link{font-size:10px}.hero-meta{bottom:1.25rem}
-.project-visual{min-height:300px}.visual-grid{background-size:38px 38px}}
+@media (max-width: 700px) {
+  .site-grid {
+    background-size: 44px 44px;
+  }
+
+  .hero {
+    min-height: 100svh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+  }
+
+  /* Image starts BELOW the text area */
+  .hero-image-bg {
+    position: absolute !important;
+    top: 48svh !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    height: auto !important;
+    background: var(--bg);
+    overflow: hidden;
+  }
+
+  .hero-image-bg:after {
+    display: none;
+  }
+
+  /* Face is at top of image — anchor image to top of container */
+  .hero-image-bg img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: 60% 0% !important;
+    transform: none !important;
+  }
+
+  /* Gradient blends dark bg above into the portrait below */
+  .hero-image-gradient {
+    background:
+      linear-gradient(
+        180deg,
+        var(--bg) 0%,
+        rgba(7,8,18,.88) 8%,
+        rgba(7,8,18,.38) 20%,
+        rgba(7,8,18,.05) 35%,
+        rgba(7,8,18,0) 65%,
+        rgba(7,8,18,.25) 100%
+      );
+  }
+
+  .hero > div:nth-of-type(2) {
+    position: relative;
+    z-index: 2;
+    display: block;
+    min-height: 100svh;
+    height: 100svh;
+    padding: 0;
+  }
+
+  .hero-title {
+    position: relative;
+    z-index: 12;
+    width: calc(100% - 40px);
+    max-width: 420px;
+    padding-top: 20svh;
+    padding-left: 0;
+    padding-right: 0;
+    transform: none !important;
+    opacity: 1 !important;
+    overflow: visible;
+  }
+
+  /* Fix name clipping — Tailwind's text-[15vw] is too wide */
+  .hero-title h1 {
+    font-size: clamp(2.6rem, 12vw, 4rem) !important;
+    line-height: .86;
+    max-width: 100%;
+    letter-spacing: -.06em;
+    white-space: normal;
+    overflow: visible;
+    word-break: normal;
+  }
+
+  /* reveal-line overflow:hidden clips text — fix it after GSAP completes */
+  .reveal-line {
+    overflow: visible;
+  }
+
+  .eyebrow {
+    margin-bottom: 1rem !important;
+    font-size: 8px !important;
+    line-height: 1.35;
+  }
+
+  .hero-copy {
+    margin-top: 1.35rem !important;
+    max-width: 17rem;
+    font-size: 11px !important;
+    line-height: 1.65 !important;
+  }
+
+  .hero-actions {
+    margin-top: 1.4rem !important;
+    gap: 1.25rem;
+  }
+
+  .hero-button {
+    padding: .72rem 1rem;
+    font-size: 10px;
+  }
+
+  .hero-link {
+    font-size: 10px;
+  }
+
+  .hero-meta {
+    bottom: 1.25rem;
+  }
+
+  .project-visual {
+    min-height: 300px;
+  }
+
+  .visual-grid {
+    background-size: 38px 38px;
+  }
+}
 @keyframes menuIn{from{transform:translateY(-100%)}to{transform:translateY(0)}}
