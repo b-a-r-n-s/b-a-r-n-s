@@ -18,8 +18,9 @@
 .hero{min-height:100svh;position:relative;overflow:hidden;display:flex;flex-direction:column;background:var(--bg)}
 .hero-image-bg{position:absolute!important;top:48svh!important;right:0!important;bottom:0!important;left:0!important;height:52svh!important;z-index:0;background:var(--bg);overflow:hidden}
 .hero-image-bg:after{display:none}
-.hero-image-bg img{position:absolute!important;top:0!important;left:-18%!important;right:auto!important;bottom:auto!important;width:170%!important;height:auto!important;max-width:none!important;object-fit:initial!important;object-position:initial!important;transform:none!important;display:block!important}
-.hero-image-gradient{position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(180deg,var(--bg) 0%,rgba(7,8,18,.96) 0%,rgba(7,8,18,.82) 12%,rgba(7,8,18,.42) 27%,rgba(7,8,18,.08) 43%,rgba(7,8,18,0) 68%,rgba(7,8,18,.28) 100%),linear-gradient(90deg,rgba(7,8,18,.9) 0%,rgba(7,8,18,.62) 25%,rgba(7,8,18,.2) 48%,rgba(7,8,18,0) 72% )!important}
+/* Mobile portrait: keep the photograph large and natural, but shift it right so the face sits in the right third. */
+.hero-image-bg img{position:absolute!important;top:0!important;left:-8%!important;right:auto!important;bottom:auto!important;width:155%!important;height:auto!important;max-width:none!important;object-fit:initial!important;object-position:initial!important;transform:none!important;display:block!important}
+.hero-image-gradient{position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(180deg,var(--bg) 0%,rgba(7,8,18,.92) 0%,rgba(7,8,18,.68) 12%,rgba(7,8,18,.26) 27%,rgba(7,8,18,.06) 43%,rgba(7,8,18,0) 68%,rgba(7,8,18,.28) 100%),linear-gradient(90deg,rgba(7,8,18,.9) 0%,rgba(7,8,18,.62) 25%,rgba(7,8,18,.2) 48%,rgba(7,8,18,0) 72%)!important}
 .hero>div:nth-of-type(3){position:relative;z-index:10;display:block;min-height:calc(100svh - 90px);height:auto;padding:0!important}
 .hero-title{position:relative;z-index:12;width:calc(100% - 40px);max-width:420px;padding-top:20svh;padding-left:0;padding-right:0;transform:none!important;opacity:1!important;overflow:visible!important}
 .hero-title h1{font-size:clamp(2.6rem,11.5vw,4rem)!important;line-height:.86!important;max-width:100%!important;letter-spacing:-.06em;white-space:nowrap;overflow:visible!important;word-break:normal}
