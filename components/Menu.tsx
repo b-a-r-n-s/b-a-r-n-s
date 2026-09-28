@@ -31,8 +31,13 @@ export default function Menu() {
       </button>
 
       {open && (
-        <div className="fixed inset-0 z-[100] bg-[var(--bg)] px-6 py-6 md:px-10 md:py-7 animate-[menuIn_.45s_cubic-bezier(.76,0,.24,1)]">
-          <div className="flex items-center justify-between border-b border-[var(--line)] pb-5">
+        <div
+          className="menu-overlay fixed inset-0 z-[100] flex min-h-dvh flex-col bg-[var(--bg)] px-6 py-6 md:px-10 md:py-7"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Site navigation"
+        >
+          <div className="menu-header flex shrink-0 items-center justify-between border-b border-[var(--line)] pb-5">
             <Link href="/" onClick={() => setOpen(false)} className="text-[11px] tracking-[.18em]">
               BARNABAS ADEJO
             </Link>
@@ -46,16 +51,17 @@ export default function Menu() {
             </button>
           </div>
 
-          <nav className="flex min-h-[calc(100vh-100px)] flex-col justify-center">
-            {links.map(([number, label, href]) => (
+          <nav className="menu-nav flex min-h-0 flex-1 flex-col justify-center" aria-label="Main navigation">
+            {links.map(([number, label, href], index) => (
               <Link
                 key={number}
                 href={href}
                 onClick={() => setOpen(false)}
-                className="group flex items-baseline gap-5 border-b border-[var(--line)] py-5 md:py-7"
+                className="menu-link group flex min-h-0 flex-1 items-center gap-4 border-b border-[var(--line)] py-3 md:gap-5 md:py-4"
+                style={{ animationDelay: `${index * 70}ms` }}
               >
-                <span className="mono text-[10px] text-[var(--blue)]">{number}</span>
-                <span className="text-[12vw] font-semibold leading-[.86] tracking-[-.065em] transition-transform duration-500 group-hover:translate-x-3 group-hover:text-[var(--purple)] md:text-[7vw]">
+                <span className="mono shrink-0 text-[10px] text-[var(--blue)] md:text-[11px]">{number}</span>
+                <span className="menu-label text-[clamp(2.35rem,8vw,7rem)] font-semibold leading-[.86] tracking-[-.065em] transition-transform duration-500 group-hover:translate-x-3 group-hover:text-[var(--purple)]">
                   {label}
                 </span>
               </Link>
