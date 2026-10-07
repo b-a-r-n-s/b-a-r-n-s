@@ -57,4 +57,13 @@ export const projects: Project[] = [
     href: "https://github.com/b-a-r-n-s/autonomous-ground-vehicle",
     stack: ["Python", "NumPy", "Matplotlib", "PID / LQR"],
   },
+  {
+    slug: "trivia-9ja",
+    number: "06",
+    title: "TRIVIA 9JA",
+    category: "PRODUCT / GAME",
+    description: "A Nigerian trivia game built around knowledge, competition and replayability, with solo play, community challenges, profiles, progression and multilingual support.",
+    href: "https://trivia-9ja.vercel.app",
+    stack: ["React", "TypeScript", "Vite", "Supabase"],
+  },
 ];
